@@ -3,9 +3,9 @@ import {anuncios} from "./anuncios.js";
 
 //añadirlo al DOM
 import { notificationController } from "./notifications/notificationController.js"
-import { anunciosListController } from "./anuncios-list/anunciosListController.js"
+import { anunciosListController } from "./anuncio-list/anuncioListController.js"
 //generar el html que generara un anuncio
-const anunciosListElement = document.querySelector('.anuncios-list')
+const anunciosListElement = document.querySelector('.anuncio-list')
 const notificationsElement = document.querySelector('.notifications')
 
 const showMessage = notificationController(notificationsElement)
