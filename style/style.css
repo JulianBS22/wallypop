@@ -5,3 +5,51 @@ body {
     font-family: 'Lobster', sans-serif;
     color: red;
   }
+
+  header {
+    background-color: #f5f5dc;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0e8d0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  /* Estilos para los botones */
+  .user-actions a,
+  #closeSession {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333;
+    background-color: #f5f5dc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-actions a:hover,
+  #closeSession:hover {
+    background-color: #333;
+    color: #f5f5dc;
+  }
+  
+  /* Estilos para el botón de cerrar sesión */
+  #closeSession {
+    display: none;
+  }
+  
+  .logged-in #closeSession {
+    display: inline-block;
+  }

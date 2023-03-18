@@ -1,6 +1,6 @@
-import { createAnuncio } from "./createAnuncio";
+import {createAnuncio} from "./createAnuncio.js"
 
-export const createTweetController = async (createAnuncioFormElement) => {
+export const createAnuncioController = async (createAnuncioFormElement) => {
   createAnuncioFormElement.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -8,10 +8,10 @@ export const createTweetController = async (createAnuncioFormElement) => {
     const anuncioContent = formData.get('AnuncioContent');
 
     try {
-      await createTweet(anuncioContent)
+      await createAnuncio(anuncioContent)
       window.location = '/'
     } catch (error) {
       alert(error)
     }
   })
-}
+};

@@ -12,10 +12,11 @@ export async function createUser(email, password) {
         "Content-Type": "application/json"
       }
     });
-  
+      
+     
     // gestion de respuesta
     if (!response.ok) {
       throw new Error('Error al crear el usuario')
     };
-  
+   return response;
   };

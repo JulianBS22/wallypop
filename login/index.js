@@ -1,4 +1,4 @@
-import { notificationController } from '../notifications/notificationController.js'
+import { notificationController } from "../notifications/notificationController.js"
 import { loginController } from "./loginController.js"
 
 const loginElement = document.querySelector('#logUser')

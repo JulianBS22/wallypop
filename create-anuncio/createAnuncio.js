@@ -20,3 +20,4 @@ export const createAnuncio = async (anuncioContent) => {
     }
   
   }
+  //throw new Error(`Error creando anuncio. Status: ${response.status}, Message: ${await response.text()}`);
