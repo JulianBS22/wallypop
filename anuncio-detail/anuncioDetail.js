@@ -20,4 +20,6 @@ export const getAnuncioById = async (anuncioId) => {
         "Authorization": `Bearer ${token}`,
       }
     })
+    return response;
   }
+  

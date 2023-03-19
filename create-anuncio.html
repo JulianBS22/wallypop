@@ -10,9 +10,19 @@
   <h1>Creación de anuncio</h1>
 
   <form id="createAnuncioForm">
+    <span for="AnuncioTitle">Título del anuncio:</span>
+    <input type="text" id="title" name="title" required>
+    <hr>
     <textarea name="AnuncioContent" id="AnuncioContent" cols="30" rows="10" required></textarea>
-
-    <button type="submit">Crear anuncio</button>
+    <div>
+      <label for="image">Imagen del anuncio:</label>
+      <input type="file" id="image" name="image">
+    </div>
+    <div>
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" name="precio" min="0" step="0.01" required>
+    </div>
+    <button type="submit">Anunciar</button>
   </form>
 
   <script type="module" src="./create-anuncio/index.js"></script>
