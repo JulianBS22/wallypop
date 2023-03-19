@@ -1,7 +1,6 @@
-
-import { pubSub } from "./pubSub.js";
+import { pubSub } from "../pubSub.js";
 import { getAnuncios } from "./anuncios.js";
-import { buildAnuncioView, buildSpinnerView, buildErrorLoadingAnuncios, buildEmptyAnuncioList } from "./anuncioView.js";
+import { buildAnuncioView, buildSpinnerView, buildErrorLoadingAnuncios, buildEmptyAnunciosList } from "./anuncioView.js";
 
 export async function anuncioListController(anuncioListElement) {
   anuncioListElement.innerHTML = buildSpinnerView();
@@ -10,7 +9,7 @@ export async function anuncioListController(anuncioListElement) {
   try {
     anuncios = await getAnuncios()
     dispatchCustomEvent('Los anuncios se cargaron correctamente', anuncioListElement)
-    pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'Los tweets se cargaron correctamente')
+    pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'Los anuncios se cargaron correctamente')
     if (anuncios.length > 0) {
       drawAnuncios(anuncios, anuncioListElement);
     } else {

@@ -24,5 +24,5 @@ export function buildAnuncioView(anuncio) {
   }
   
   export function buildEmptyAnunciosList() {
-    return `<p>No hay resultados disponibles</p>`;
-  }
+    return `<p>No hay resultados disponibles</p>`
+  };

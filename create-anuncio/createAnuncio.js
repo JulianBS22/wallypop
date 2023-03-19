@@ -1,6 +1,6 @@
 export const createAnuncio = async (anuncioContent) => {
 
-    const newAnucio = {
+    const newAnuncio = {
       content: anuncioContent
     }
   
@@ -12,12 +12,12 @@ export const createAnuncio = async (anuncioContent) => {
         'Content-Type': 'application/json',
         "Authorization": `Bearer ${token}`,
       },
-      body: JSON.stringify(newAnucio)
+      body: JSON.stringify(newAnuncio)
     })
   
     if (!response.ok) {
       throw new Error('Error creando anuncio')
     }
-  
+  return response;
   }
   //throw new Error(`Error creando anuncio. Status: ${response.status}, Message: ${await response.text()}`);

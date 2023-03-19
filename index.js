@@ -18,7 +18,7 @@ anunciosListElement.addEventListener('newNotification', (event) => {
 
 import { notificationController } from "./notifications/notificationController.js"
 import { anuncioListController } from "./anuncio-list/anuncioListController.js"
-import { userActionsController } from "./user-actions/userActionsController.js"
+import { userActionsController } from "./user-action/userActionController.js"
 
 
 const anunciosListElement = document.querySelector('.anuncio-list')
